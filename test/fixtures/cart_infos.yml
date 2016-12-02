@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shopping_cart: one
+  item_quantity: 1
+  coupon_code: MyString
+
+two:
+  shopping_cart: two
+  item_quantity: 1
+  coupon_code: MyString

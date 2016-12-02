@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: 1
+  price: 1.5
+  title: MyString
+  year: MyString
+  qty_on_order: 1
+  qty_in_stock: 1
+
+two:
+  isbn: 1
+  price: 1.5
+  title: MyString
+  year: MyString
+  qty_on_order: 1
+  qty_in_stock: 1
