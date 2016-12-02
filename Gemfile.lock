@@ -39,12 +39,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
-    autoprefixer-rails (6.5.3)
-      execjs
     bcrypt (3.1.11)
-    bootstrap (4.0.0.alpha5)
-      autoprefixer-rails (>= 6.0.3)
-      sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -109,7 +104,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.0.1)
       sprockets-rails (>= 2.0.0)
-    rails-assets-tether (1.1.1)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6.0)
@@ -172,17 +166,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0.alpha4)
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  nokogiri (~> 1.6, >= 1.6.8.1)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
-  rails-assets-tether (~> 1.1, >= 1.1.1)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

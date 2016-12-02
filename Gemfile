@@ -19,12 +19,6 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# HTML, XML, SAX, and Reader parser
-gem 'nokogiri', '~> 1.6', '>= 1.6.8.1'
-# A client-side library to make absolutely positioned elements attach to elements in the page efficiently.
-gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'
-# Framework for developing responsive, mobile first projects on the web
-gem 'bootstrap', '~> 4.0.0.alpha4'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.2'
 
