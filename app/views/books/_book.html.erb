@@ -1,8 +1,9 @@
 <tr>
-  <td></td>
+  <td><% button_to %></td>
   <td><%= book.title %></td>
   <% author = get_author(book.isbn)%>
   <td><%= "#{author.first_name} #{author.middle_name} #{author.last_name} #{author.alt_last_name}" unless author.nil? %></td>
   <td><%= get_publisher(book.isbn).pub_name unless get_publisher(book.isbn).nil? %></td>
   <td><%= get_category(book.isbn) unless get_category(book.isbn).nil? %></td>
+  <td></td>
 </tr>
