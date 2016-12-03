@@ -1,7 +1,6 @@
-User.new(email: "hardgrove.22@osu.edu", address: "55 E 13th Ave, Columbus, OH 43201",
-         first_name: "Ian", last_name: "Hardgrove", password: "jamesb007").save
+User.new(email: "hardgrove.22@osu.edu", address: "55 E 13th Ave, Columbus, OH 43201", first_name: "Ian", last_name: "Hardgrove", password: "jamesb007").save
 
-Book.new( isbn: 1781109605, price: 12.99,
+Book.new(isbn: 1781109605, price: 12.99,
           title: 'Fantastic Beasts and Where to Find Them',
           year: '2016', qty_on_order: 50, qty_in_stock: 50).save
 
