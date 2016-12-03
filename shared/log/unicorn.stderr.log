@@ -1,0 +1,9 @@
+I, [2016-12-03T04:38:06.565992 #14466]  INFO -- : Refreshing Gem list
+I, [2016-12-03T04:38:07.997887 #14466]  INFO -- : listening on addr=/home/ubuntu/bits+books/shared/sockets/unicorn.sock fd=8
+I, [2016-12-03T04:38:07.998030 #14466]  INFO -- : worker=0 spawning...
+I, [2016-12-03T04:38:07.999083 #14466]  INFO -- : worker=1 spawning...
+I, [2016-12-03T04:38:07.999741 #14466]  INFO -- : master process ready
+I, [2016-12-03T04:38:08.004085 #14469]  INFO -- : worker=0 spawned pid=14469
+I, [2016-12-03T04:38:08.013360 #14469]  INFO -- : worker=0 ready
+I, [2016-12-03T04:38:08.014114 #14471]  INFO -- : worker=1 spawned pid=14471
+I, [2016-12-03T04:38:08.014247 #14471]  INFO -- : worker=1 ready
