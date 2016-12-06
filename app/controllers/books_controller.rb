@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:isbn])
+    @book = Book.find_by(isbn: params[:isbn])
     # Book->Publisher table join
     publisher_id = BookPub.find_by(isbn_id: @book.isbn).publisher_id
     @publisher = Publisher.find(publisher_id)

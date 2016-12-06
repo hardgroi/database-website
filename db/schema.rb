@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201043747) do
+ActiveRecord::Schema.define(version: 20161206040843) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "first_name"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20161201043747) do
     t.integer  "qty_in_stock"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["isbn"], name: "index_books_on_isbn", unique: true
   end
 
   create_table "cart_infos", force: :cascade do |t|
@@ -114,11 +115,11 @@ ActiveRecord::Schema.define(version: 20161201043747) do
   end
 
   create_table "shopping_carts", force: :cascade do |t|
-    t.integer  "isbn_id"
+    t.integer  "book_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["isbn_id"], name: "index_shopping_carts_on_isbn_id"
+    t.index ["book_id"], name: "index_shopping_carts_on_book_id"
     t.index ["user_id"], name: "index_shopping_carts_on_user_id"
   end
 

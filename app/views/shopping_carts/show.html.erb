@@ -1,0 +1,53 @@
+<%= provide(:title, "Shopping Cart") %>
+
+
+<% if @shopping_cart_items.empty? or @shopping_cart_items.nil? %>
+  <div class="row">
+    <div class="col-xs-8 offset-xs-2">
+      <div class="jumbotron">
+        <h3>Your cart is empty</h3>
+        <p>Add some items to begin filling your cart</p>
+        <%= link_to "Listings", books_index_path %>
+      </div>
+    </div>
+  </div>
+<% else %>
+<div class="row">
+  <div class="col-xs-8 offset-xs-2">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Publisher</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @shopping_cart_items.each do |item| %>
+          <tr>
+            <td><%= get_book_title(item.book_id) %></td>
+            <% a = get_book_author(item.book_id)%>
+            <td><%= "#{a.first_name} #{a.middle_name} #{a.last_name} #{a.alt_last_name}" %></td>
+            <td><%= get_book_publisher_name(item.book_id).to_s %></td>
+            <td><%= get_book_price(item.book_id).to_s %></td>
+            <td><%= get_item_quantity(item.id).to_s %></td>
+            <td><%= button_to 'Remove', shopping_carts_remove_path(:isbn => item.book_id, :user_id => current_user.id), :method => :delete, class: 'btn btn-danger'%></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--
+<div class="row">
+  <div class="col-xs-10 offset-xs-1">
+    <div class="float-xs-right">
+      <button type="button" class='btn btn-info'>Checkout</button>
+    </div>
+  </div>
+</div>
+-->
+<% end %>
