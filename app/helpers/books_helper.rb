@@ -2,7 +2,12 @@ module BooksHelper
 
   # Methods to manually handle joins
   def get_author(isbn)
-    return Author.find(BookAuth.find_by(book_id: isbn).author_id)
+    authors = Array.new
+    author_ids = BookAuth.where(book_id: isbn)
+    author_ids.each do |id|
+      authors.push Author.find(id.author_id)
+    end
+    return authors
   end
 
   def get_publisher(isbn)

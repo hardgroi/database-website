@@ -1,10 +1,20 @@
 <tr>
   <td><%= link_to "View", {controller: "books", action: "show", isbn: book.isbn}, class: "btn btn-info"%></td>
   <td><%= book.title %></td>
-  <% author = get_author(book.isbn)%>
-  <td><%= "#{author.first_name} #{author.middle_name} #{author.last_name} #{author.alt_last_name}" unless author.nil? %></td>
-  <td><%= get_publisher(book.isbn).pub_name unless get_publisher(book.isbn).nil? %></td>
-  <td><%= get_category(book.isbn) unless get_category(book.isbn).nil? %></td>
+  <% @authors = get_author(book.isbn)%>
+  <td>
+    <ul>
+      <% @authors.each do |a| %>
+        <li>
+          <%= a.first_name unless a.first_name.nil? %>
+          <%= ' ' + a.middle_name unless a.middle_name.nil? %>
+          <%= ' ' + a.last_name unless a.last_name.nil? %>
+          <%= ' ' + a.alt_last_name unless a.alt_last_name.nil?%>
+        </li>
+      <% end %>
+    </ul>
+  </td>
+  <td><%= get_publisher(book.isbn).pub_name %></td>
   <td><%= book.price %></td>
   <td><%= button_to "Add to Cart", shopping_carts_add_path(:isbn => book.isbn, :user_id => current_user.id), class: 'btn btn-warning'%></td>
 </tr>

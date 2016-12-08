@@ -29,8 +29,19 @@
         <% @shopping_cart_items.each do |item| %>
           <tr>
             <td><%= get_book_title(item.book_id) %></td>
-            <% a = get_book_author(item.book_id)%>
-            <td><%= "#{a.first_name} #{a.middle_name} #{a.last_name} #{a.alt_last_name}" %></td>
+            <% @authors = get_book_author(item.book_id)%>
+            <td>
+              <ul>
+                <% @authors.each do |a| %>
+                  <li>
+                    <%= a.first_name unless a.first_name.nil? %>
+                    <%= ' ' + a.middle_name unless a.middle_name.nil? %>
+                    <%= ' ' + a.last_name unless a.last_name.nil? %>
+                    <%= ' ' + a.alt_last_name unless a.alt_last_name.nil?%>
+                  </li>
+                <% end %>
+              </ul>
+            </td>
             <td><%= get_book_publisher_name(item.book_id).to_s %></td>
             <td><%= get_book_price(item.book_id).to_s %></td>
             <td><%= get_item_quantity(item.id).to_s %></td>
@@ -41,13 +52,12 @@
     </table>
   </div>
 </div>
-<!--
 <div class="row">
   <div class="col-xs-10 offset-xs-1">
     <div class="float-xs-right">
-      <button type="button" class='btn btn-info'>Checkout</button>
+      <button type="button" class='btn btn-info'data-toggle="modal" data-target="#myModal2">Checkout</button>
     </div>
   </div>
 </div>
--->
+<%= render 'checkout_modal'%>
 <% end %>
