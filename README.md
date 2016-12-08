@@ -1,30 +1,20 @@
 # README
 
-* Ruby version
-  ruby -v 2.3.0
-  rails -v 5.0.0.1
+* Ruby version [ruby -v 2.3.0, rails -v 5.0.0.1]
   
-* System dependencies
-  sqlite
-  nginx
+* System dependencies [sqlite, nginx]
   
-* Configuration
-  rails application utlizing a sqlite database
+* Configuration [rails application utlizing a sqlite database]
   
-* Database creation
-  RAILS_ENV=production rake db:migrate:reset db:seed
+* Database creation [RAILS_ENV=production rake db:migrate:reset db:seed]
 
-* Database initialization
-  none - rails naturally uses sqlite
+* Database initialization [none - rails naturally uses sqlite]
   
-* How to run the test suite
-  no unit/integeration testing
+* How to run the test suite [no unit/integeration testing]
 
-* Services (job queues, cache servers, search engines, etc.)
-  none
+* Services (job queues, cache servers, search engines, etc.) [none]
 
-* Deployment instructions
-  extensive and boring
+* Deployment instructions [extensive and boring]
 
   To use the site:
   
